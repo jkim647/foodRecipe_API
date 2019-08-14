@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Runtime.Serialization;
 
 namespace FoodRecipe.Model
 {
@@ -27,27 +26,5 @@ namespace FoodRecipe.Model
 
         [InverseProperty("Food")]
         public virtual ICollection<Restaurant> Restaurant { get; set; }
-    }
-
-    [DataContract]
-    public class VideoDTO
-    {
-        [DataMember]
-        public int FoodId { get; set; }
-
-        [DataMember]
-        public string Title { get; set; }
-
-        [DataMember]
-        public int Cal { get; set; }
-
-        [DataMember]
-        public string Ingredients { get; set; }
-
-        [DataMember]
-        public int Width { get; set; }
-
-        [DataMember]
-        public bool IsFavourite { get; set; }
     }
 }
